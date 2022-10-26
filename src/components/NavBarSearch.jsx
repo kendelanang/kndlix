@@ -16,7 +16,7 @@ const NavBarSearch = () => {
     };
 
     const cari = e =>{
-        navigate(`/search?query=${search}`)
+        navigate(`/kndlix/search?query=${search}`)
         window.location.reload(false);
     }
 

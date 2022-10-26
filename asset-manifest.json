@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/kendlix/static/css/main.9a7f1e34.css",
+    "main.js": "/kendlix/static/js/main.fec3c16e.js",
+    "static/media/kendlix.png": "/kendlix/static/media/kendlix.c89a3b0e9de87263e4d3.png",
+    "index.html": "/kendlix/index.html",
+    "main.9a7f1e34.css.map": "/kendlix/static/css/main.9a7f1e34.css.map",
+    "main.fec3c16e.js.map": "/kendlix/static/js/main.fec3c16e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9a7f1e34.css",
+    "static/js/main.fec3c16e.js"
+  ]
+}

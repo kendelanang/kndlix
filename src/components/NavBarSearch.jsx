@@ -11,7 +11,7 @@ const NavBarSearch = () => {
             window.location.reload(false);
             e.preventDefault();
         } else{
-            navigate(`/search?query=${search}`)
+            navigate(`/kndlix/search?query=${search}`)
         }
     };
 

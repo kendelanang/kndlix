@@ -14,7 +14,7 @@ function App() {
       <AuthContextProvider>
         <Navbar />
         <Routes>
-          <Route path='/kndlix/' element={<Home />} />
+          <Route path='/kndlix/home' element={<Home />} />
           <Route path='/kndlix/login' element={<Login />} />
           <Route path='/kndlix/signup' element={<Signup />} />
           <Route path='/kndlix/account' element={<ProtectedRoute><Account /></ProtectedRoute>} />

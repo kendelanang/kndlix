@@ -14,7 +14,7 @@ const Login = () => {
     setError('')
     try {
       await logIn(email, password);
-      navigate('/')
+      navigate('/kndlix/home')
     } catch (error) {
       console.log(error)
       setError(error.message)
@@ -43,7 +43,7 @@ const Login = () => {
               <p className='py-8'>
                 <span className='text-gray-600'>Belum punya akun?
                 </span>{' '}
-                <Link to='/signup'>Sign Up</Link>
+                <Link to='/kndlix/signup'>Sign Up</Link>
               </p>
             </form>
           </div>

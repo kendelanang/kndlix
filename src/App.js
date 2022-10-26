@@ -14,11 +14,11 @@ function App() {
       <AuthContextProvider>
         <Navbar />
         <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/login' element={<Login />} />
-          <Route path='/signup' element={<Signup />} />
-          <Route path='/account' element={<ProtectedRoute><Account /></ProtectedRoute>} />
-          <Route path='/search' element={<Search />} />
+          <Route path='/kndlix/' element={<Home />} />
+          <Route path='/kndlix/login' element={<Login />} />
+          <Route path='/kndlix/signup' element={<Signup />} />
+          <Route path='/kndlix/account' element={<ProtectedRoute><Account /></ProtectedRoute>} />
+          <Route path='/kndlix/search' element={<Search />} />
         </Routes>
       </AuthContextProvider>
     </>

@@ -14,7 +14,7 @@ const Navbar = () => {
   const handleLogout = async () => {
     try {
       await logOut();
-      navigate('/')
+      navigate('/kndlix/home')
     } catch (error) {
       console.log(error);
     }
@@ -48,10 +48,10 @@ const Navbar = () => {
           </div>
         ) : (
           <div>
-            <Link to='/login'>
+            <Link to='/kndlix/login'>
               <button className='text-white pr-4'>Masuk</button>
             </Link>
-            <Link to='/signup'>
+            <Link to='/kndlix/signup'>
               <button className='bg-red-600 px-6 py-2 rounded cursor-pointer text-white'>Daftar</button>
             </Link>
           </div>)}

@@ -22,7 +22,7 @@ const Navbar = () => {
 
   return (
     <div className='flex items-center p-4 z-[100] w-full absolute'>
-      <Link to='/'>
+      <Link to='/kndlix/home'>
         <img className='h-full w-[120px]' src={kendlix} alt='' />
       </Link>
 

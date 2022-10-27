@@ -23,7 +23,7 @@ const Navbar = () => {
   return (
     <div className='flex items-center p-4 z-[100] w-full absolute'>
       <Link to='/kndlix/'>
-        <img className='h-full w-[120px]' src={kendlix} alt='' />
+        <img className='h-full w-[120px]' src={kendlix} alt='logo-kendlix' />
       </Link>
 
       <div onClick={() => setSearch(!search)} className='text-white absolute right-0 mr-48 lg:w-6 md:hidden'>
@@ -44,7 +44,7 @@ const Navbar = () => {
             <Link to='/kndlix/account'>
               <button className='text-white pr-4'>Akun</button>
             </Link>
-            <button onClick={handleLogout} className='bg-red-600 px-6 py-2 rounded cursor-pointer text-white'>Logout</button>
+            <button onClick={handleLogout} className='bg-red-600 px-6 py-2 rounded cursor-pointer text-white'>Keluar</button>
           </div>
         ) : (
           <div>

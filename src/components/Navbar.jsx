@@ -14,7 +14,7 @@ const Navbar = () => {
   const handleLogout = async () => {
     try {
       await logOut();
-      navigate('/kndlix/home')
+      navigate('/kndlix/')
     } catch (error) {
       console.log(error);
     }
@@ -22,7 +22,7 @@ const Navbar = () => {
 
   return (
     <div className='flex items-center p-4 z-[100] w-full absolute'>
-      <Link to='/kndlix/home'>
+      <Link to='/kndlix/'>
         <img className='h-full w-[120px]' src={kendlix} alt='' />
       </Link>
 

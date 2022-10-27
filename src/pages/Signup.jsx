@@ -13,7 +13,7 @@ const Signup = () => {
     e.preventDefault()
     try {
       await signUp(email, password);
-      navigate('/kndlix/home')
+      navigate('/kndlix/')
     } catch (error) {
       console.log(error)
     }

@@ -14,7 +14,7 @@ const Login = () => {
     setError('')
     try {
       await logIn(email, password);
-      navigate('/kndlix/home')
+      navigate('/kndlix/')
     } catch (error) {
       console.log(error)
       setError(error.message)

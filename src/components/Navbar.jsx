@@ -41,7 +41,7 @@ const Navbar = () => {
       <div className='right-0 absolute p-4'>
         {user?.email ? (
           <div>
-            <Link to='/account'>
+            <Link to='/kndlix/account'>
               <button className='text-white pr-4'>Akun</button>
             </Link>
             <button onClick={handleLogout} className='bg-red-600 px-6 py-2 rounded cursor-pointer text-white'>Logout</button>

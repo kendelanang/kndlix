@@ -25,7 +25,7 @@ const Main = ({}) => {
             console.log(movie.id)
             alert(`${movie.title} telah ditambahkan ke tonton nanti`)
         } else {
-            alert('Please log in to save a movie')
+            alert('Harap login terlebih dahulu')
         }
     }
 

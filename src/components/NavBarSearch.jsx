@@ -10,12 +10,12 @@ const NavBarSearch = () => {
         if ((e).key === 'Enter') {
             window.location.reload(false);
             e.preventDefault();
-        } else{
+        } else {
             navigate(`/kndlix/search?query=${search}`)
         }
     };
 
-    const cari = e =>{
+    const cari = e => {
         navigate(`/kndlix/search?query=${search}`)
         window.location.reload(false);
     }

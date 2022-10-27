@@ -4,7 +4,7 @@ import { MdChevronLeft, MdChevronRight } from 'react-icons/md';
 import Movie from './Movie';
 import { useLocation } from 'react-router-dom'
 
-const SearchResults = ({ title, fetchURL, rowID }) => {
+const SearchResults = ({ title, rowID }) => {
     const [movies, setMovies] = useState([]);
     const [error, setError] = useState(false);
     const location = useLocation();

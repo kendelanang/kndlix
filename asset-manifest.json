@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/kndlix/static/css/main.9a7f1e34.css",
-    "main.js": "/kndlix/static/js/main.2960a2c6.js",
+    "main.css": "/kndlix/static/css/main.9d38a221.css",
+    "main.js": "/kndlix/static/js/main.c6d971d7.js",
     "static/media/kendlix.png": "/kndlix/static/media/kendlix.c89a3b0e9de87263e4d3.png",
     "index.html": "/kndlix/index.html",
-    "main.9a7f1e34.css.map": "/kndlix/static/css/main.9a7f1e34.css.map",
-    "main.2960a2c6.js.map": "/kndlix/static/js/main.2960a2c6.js.map"
+    "main.9d38a221.css.map": "/kndlix/static/css/main.9d38a221.css.map",
+    "main.c6d971d7.js.map": "/kndlix/static/js/main.c6d971d7.js.map"
   },
   "entrypoints": [
-    "static/css/main.9a7f1e34.css",
-    "static/js/main.2960a2c6.js"
+    "static/css/main.9d38a221.css",
+    "static/js/main.c6d971d7.js"
   ]
 }

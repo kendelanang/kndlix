@@ -1,21 +1,71 @@
-import React from 'react'
-import Row from '../components/Row'
-import SearchResults from '../components/SearchResults'
+import axios from "axios";
+import React, { useEffect } from "react";
+import { useState } from "react";
+import requests from "../Requests";
+import { BiSearch } from "react-icons/bi";
 
 const Search = () => {
-    return (
-        <>
-            <div className='w-full text-white'>
-                <img className='w-full h-[400px] object-cover' src='https://assets.nflxext.com/ffe/siteui/vlv3/79fe83d4-7ef6-4181-9439-46db72599559/83b58a62-6624-4188-8119-8bdf395dae3f/ID-en-20221017-popsignuptwoweeks-perspective_alpha_website_large.jpg' alt='/' />
-                <div className='bg-black/60 fixed top-0 left-0 w-full h-[550px]'></div>
-                <div className='absolute top-[20%] p-4 md:p-8'>
-                    <h1 className='text-3xl md:text-5xl font-bold'>Cari Film</h1>
-                </div>
-            </div>
-            <Row rowID='1' title='Pencarian' />
-            <SearchResults />
-        </>
-    )
-}
+  const [popularMovies, setPopularMovies] = useState([]);
 
-export default Search
+  const getMovieList = async () => {
+    const movie = await axios.get(`${requests.requestPopular}`);
+    return movie.data.results;
+  };
+
+  const searchMovie = async (q) => {
+    const search = await axios.get(`${requests.requestSearch}${q}`);
+    return search.data;
+  };
+
+  useEffect(() => {
+    getMovieList().then((result) => {
+      setPopularMovies(result);
+    });
+  }, []);
+
+  const search = async (q) => {
+    if (q.length > 3) {
+      const query = await searchMovie(q);
+      setPopularMovies(query.results);
+    }
+  };
+
+  const PopularMovieList = () => {
+    return popularMovies.map((movie, i) => {
+      return (
+        <div className=".movie-wrapper text-center bg-black/50 w-[300px] rounded-xl mt-10">
+          <div className="">{movie.title}</div>
+          <img
+            src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`}
+            alt=""
+          />
+          <div className="">release date : {movie.release_date}</div>
+          <div className="">rating : {movie.vote_average}</div>
+        </div>
+      );
+    });
+  };
+
+  return (
+    <div className="w-full h-full">
+      <div className="flex flex-col justify-center items-center pt-[100px]">
+        <div className="text-white text-5xl">Cari Film</div>
+        <div className="w-[500px] flex flex-row rounded-full bg-black/50 my-3">
+          <input
+            className="w-full text-xl px-3 my-5 bg-black/0 text-white z-9 focus:outline-none"
+            type="text"
+            placeholder="Cari film kesayanganmu..."
+            onChange={({ target }) => search(target.value)}
+          />
+          <BiSearch className="text-white text-3xl my-auto mr-4" />
+        </div>
+      </div>
+
+      <div className="movie-container flex w-full text-white items-center justify-center gap-3 flex-wrap">
+        <PopularMovieList />
+      </div>
+    </div>
+  );
+};
+
+export default Search;
